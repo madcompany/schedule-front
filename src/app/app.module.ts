@@ -32,8 +32,7 @@ import {
 import { LectureComponent } from "./pages/lecture/lecture.component";
 import { TimetableComponent } from "./pages/timetable/timetable.component";
 
-const appRoutes: Routes = [
-  { path: '**', redirectTo: 'timetable' },
+const appRoutes: Routes = [  
   { path: 'timetable', component:  TimetableComponent},
   { path: 'lecture', component: LectureComponent }  
 ];
