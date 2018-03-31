@@ -1,11 +1,20 @@
-//Module
+//modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+
+import { FlexLayoutModule } from "@angular/flex-layout";
+//services
+import { HelperService } from "./services/helper.service";
+import { ApiService } from "./services/api.service";
+import { LectureService } from "./services/lecture/lecture.service";
+//components
+import { AppComponent } from './app.component';
+import { LectureComponent } from "./pages/lecture/lecture.component";
+import { TimetableComponent } from "./pages/timetable/timetable.component";
 
 import {
   MatButtonModule,
@@ -24,15 +33,12 @@ import {
   MatRadioModule,
   MatSelectModule,  
   MatTableModule,  
+  MatSnackBarModule
+  
 } from '@angular/material';
 
-//Service
-
-//Component
-import { LectureComponent } from "./pages/lecture/lecture.component";
-import { TimetableComponent } from "./pages/timetable/timetable.component";
-
-const appRoutes: Routes = [  
+const appRoutes: Routes = [    
+  { path: '', component:  TimetableComponent},
   { path: 'timetable', component:  TimetableComponent},
   { path: 'lecture', component: LectureComponent }  
 ];
@@ -41,14 +47,14 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TimetableComponent,
-    LectureComponent
+    LectureComponent,    
   ],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
     BrowserModule,
     BrowserAnimationsModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatButtonToggleModule,
     MatCardModule,
@@ -65,14 +71,18 @@ const appRoutes: Routes = [
     MatRadioModule,
     MatSelectModule,
     MatTableModule,
+    MatSnackBarModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      //{ enableTracing: true } // <-- debugging purposes only
     ),
-    // other imports here,    
-    
+    FlexLayoutModule
+  ],  
+  providers: [
+    HelperService,
+    ApiService,
+    LectureService
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

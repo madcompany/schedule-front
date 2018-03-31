@@ -12,10 +12,10 @@ import { Observable } from "rxjs/Observable";
 export class ApiService implements API {
 
     private API_ID_TOKEN_KEY = 'id_token';
-    private API_HEADER_KEY = 'x-api-key';
-    
+    private API_HEADER_KEY = 'x-api-key';    
 
-    private API_URL = "schedule-api.makemusic.kr";
+    //private API_URL = "schedule-api.makemusic.kr";
+    private API_URL = "http://localhost:8080";
 
     constructor(
         private http: Http

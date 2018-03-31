@@ -1,22 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    시간표
-  </h1>  
-</div>
-
-
 <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item routerLink="/timetable" routerLinkActive="active">시간표등록</button>
   <button mat-menu-item routerLink="/lecture" routerLinkActive="active">강의등록</button>
 </mat-menu>
-
-
-
 <router-outlet></router-outlet>
-
-
-<!-- Copyright 2018 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->

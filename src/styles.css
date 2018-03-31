@@ -1,16 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-body { 
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.bounds {    
+    height :800px;
+}
+  
+  
+.sec1, .sec2, .sec3 {
+    padding-top:20px;
+    text-align:center
+}
+  
+.content {
+    min-width: 300px;
+    /*height: 400px;*/
 }
 
-.basic-container {
-  padding: 5px;
+.card-demo .mat-card-content > :last-child,
+.card-demo > :last-child {
+    margin-bottom: 6px;
 }
 
-.version-info {
-  font-size: 8pt;
-  float: right;
+.example-card {
+    float: left;
+    
+    margin-top:10px;
+    margin-left:10px;
+    max-width: 20%;
 }
