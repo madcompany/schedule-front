@@ -40,7 +40,7 @@ export class TimetableComponent {
         
     }
 
-    private getUnivList(){
+    public getUnivList(){
         this.lectureService.getUnivList(result => {
             this.univList = result.univList;            
         }, error => {
@@ -49,7 +49,7 @@ export class TimetableComponent {
         });
     }
 
-    private getSubjectList(){
+    public getSubjectList(){
         
         this.lectureService.getSubjectList(this.filter, result => {
             this.subjectList = result.subjectList;
