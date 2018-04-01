@@ -52,10 +52,10 @@
             <tr *ngFor="let height of timeBlock.height; let i = index">
                 <td>{{ height }}</td>
                 <td *ngFor="let width of timeBlock.width">
-                    <span *ngIf="info[width][height]!=undefined">
+                    <span *ngIf="info[width]!=undefined && info[width][height] != undefined ">
                         {{info[width][height]['subject_name'] }}
                     </span>
-                    <span *ngIf="info[width][height]==undefined">&nbsp;</span>
+                    <span *ngIf="info[width]==undefined || info[width][height]==undefined">&nbsp;</span>
                 </td>
             </tr>
         </table>
