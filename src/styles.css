@@ -25,5 +25,26 @@
     
     margin-top:10px;
     margin-left:10px;
-    max-width: 20%;
+    max-width: 30%;
+}
+
+.example-card table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+.example-card td, th {
+border: 1px solid rgb(190,190,190);
+padding: 10px 20px;
+}
+.example-card td {
+text-align: center;
+}
+.example-card caption {
+padding: 10px;
+}
+
+.example-card .backBolad {
+    background-color: darkgrey;
 }
