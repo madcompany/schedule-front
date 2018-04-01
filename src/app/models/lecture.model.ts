@@ -29,6 +29,14 @@ export interface Timetable {
     grade?: number;
 }
 
+export interface Filter {
+    univ_idx: number;
+    subjectList?: Array<Subject>;
+    subject_idx?: Array<number>;
+    week: Array<number>;
+    period: Array<number>;
+}
+
 /**
  * 타임블록 초기화 함수
  */

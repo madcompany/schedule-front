@@ -17,3 +17,7 @@ export const PeriodArray = [
     {key:8 , value:"8교시"},
 ]
 
+export const Timeblock = {
+    width:[1,2,3,4,5],
+    height:[1,2,3,4,5,6,7,8]
+}
